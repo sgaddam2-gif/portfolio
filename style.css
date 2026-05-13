@@ -1,0 +1,283 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* Background */
+
+.blur-circle{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(140px);
+    z-index:-1;
+}
+
+.one{
+    width:300px;
+    height:300px;
+    background:#38bdf8;
+    top:-100px;
+    left:-100px;
+    opacity:.15;
+}
+
+.two{
+    width:300px;
+    height:300px;
+    background:#9333ea;
+    bottom:-100px;
+    right:-100px;
+    opacity:.15;
+}
+
+/* Navbar */
+
+.navbar{
+    position:fixed;
+    top:20px;
+    left:5%;
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    z-index:1000;
+}
+
+.logo{
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    left:0;
+    bottom:-5px;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.tagline{
+    color:#38bdf8;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-top:15px;
+}
+
+.hero span{
+    background:linear-gradient(to right,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h3{
+    margin-top:10px;
+    color:#94a3b8;
+}
+
+.hero-description{
+    max-width:650px;
+    margin:25px auto;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+button{
+    padding:14px 28px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#38bdf8;
+}
+
+.btn-secondary{
+    background:transparent;
+    border:2px solid #38bdf8;
+    color:white;
+    margin-left:15px;
+}
+
+button:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+
+.section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.section h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* Cards */
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:40px;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:18px 28px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    background:#38bdf8;
+    color:black;
+}
+
+/* Certifications */
+
+.certifications-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.cert-card{
+    background:#1e293b;
+    width:300px;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.cert-card:hover{
+    transform:translateY(-8px);
+    background:#38bdf8;
+    color:black;
+}
+
+/* Contact */
+
+.email{
+    margin:15px 0;
+}
+
+.social-links{
+    margin-top:20px;
+}
+
+.social-links a{
+    text-decoration:none;
+    margin:10px;
+    background:#1e293b;
+    padding:12px 20px;
+    border-radius:10px;
+    color:white;
+}
+
+.social-links a:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.section h2{
+    font-size:32px;
+}
+}
